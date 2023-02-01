@@ -61,10 +61,7 @@ input:active:focus {
   outline: none;
 }
 
-input {
-  box-shadow: none;
-  transition: all 0.2s linear;
-}
+
 
 input:focus {
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
@@ -79,10 +76,6 @@ input:focus {
 .fas {
   margin-left: -2.5rem;
   cursor: pointer;
-  /* pointer-events: auto; */
-  /* z-index: 10; */
-  /* background-color: #fff; */
-  /* background-image: none; */
   color: rgb(35, 35, 35);
   transition: color 0.15s linear;
   font-size: 2rem;
@@ -92,10 +85,6 @@ input:focus {
   color: rgb(47, 214, 122);
 }
 
-.fa-plus:before {
-  content: "\f067";
-  font-size: 1.5rem;
-}
 
 .showItems {
   margin-top: 3rem;
@@ -129,7 +118,6 @@ input:focus {
 
 .fa-trash-alt,
 .fa-edit {
-  /* margin-left: -2.5rem; */
   cursor: pointer;
   pointer-events: auto;
   z-index: 10;
