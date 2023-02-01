@@ -4,9 +4,13 @@ export const addTodo =(data)=>{
         payload: {
             id:new Date().getTime().toString(),
             data:data
+         
         }
     }
+   
 }
+
+
 
 export const deleteTodo =(id)=>{
     return {

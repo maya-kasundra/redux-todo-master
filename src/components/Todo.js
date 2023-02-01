@@ -6,7 +6,19 @@ import './Todo.css'
 const Todo = () => {
     const [inputData, setInputData]= useState('');
     const dispatch = useDispatch();
+    // console.log(dispatch);
+    // console.log(inputData);
     const list = useSelector((state)=>state.todoReducer.list)
+    // console.log(list);
+
+    const add = () => {
+      if (inputData === "" ) {
+        alert("Input is Empty");
+      } else {
+        dispatch(addTodo(inputData));
+      }
+    };
+
   return (
     <>
     <div className="main-div">
@@ -16,12 +28,11 @@ const Todo = () => {
         </figure>
         <div className="addItems">
           <input type="text" placeholder="add Item..." value={inputData} onChange={(event)=>setInputData(event.target.value)}/>
-          <i className="fas fa-plus add-btn" onClick={()=>dispatch(addTodo(inputData), setInputData(''))}></i>
+          <i className="fas fa-plus add-btn" onClick={add} ></i>
         </div>
         <div className="showItems">
-        {
 
-          
+      {
           list.map((ele)=>{
            return (<div className="eachItem" key={ele.id}>
             <h3>
@@ -32,7 +43,7 @@ const Todo = () => {
             </div>
           </div>)
            
-          })
+          }) 
         }
          
         </div>

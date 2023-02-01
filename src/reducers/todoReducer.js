@@ -4,6 +4,8 @@ const initialData ={
     list:[]
 }
 const todoReducer = (state=initialData, action) => {
+    // console.log(action);
+    // console.log(state);
     switch (action.type) {
         case "ADD_TODO":
             const {id, data}= action.payload;
@@ -15,6 +17,7 @@ const todoReducer = (state=initialData, action) => {
                         id:id,
                         data:data
                     }
+                  
                 ]
             }
 
@@ -43,5 +46,6 @@ const todoReducer = (state=initialData, action) => {
     }
 
 }
+// console.log(todoReducer);
 
 export default todoReducer;

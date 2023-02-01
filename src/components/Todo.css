@@ -116,8 +116,8 @@ input:focus {
   color: #fff;
 }
 
-.fa-trash-alt,
-.fa-edit {
+.fas-trash
+ {
   cursor: pointer;
   pointer-events: auto;
   z-index: 10;
